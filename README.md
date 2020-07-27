@@ -9,7 +9,7 @@ run main.py file for the project
 
 Files will be uploaded in the uploads folder
 
-
+Please change 'your_gmail_id' and 'your_gmail_password' fields with your credentials to work contact us page with real-time mails .
 
 USER LOGIN:
 
