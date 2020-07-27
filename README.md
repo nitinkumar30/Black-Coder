@@ -21,8 +21,6 @@ You just need to see the post , no need to login ... or else login with the abov
 DON'T FORGET TO CREATE A DATABASE NAMING "blackcoder" and import the sql file .
 WITHOUT THE DATABASE THE PROJECT WON'T RUN.
 
->>DATABASE FILE IS INSIDE "DATABASE" FOLDER!
-
 ***** IF YOU FIND ANY ERRORS OR ANY PROBLEMS RELATED THIS PROGRAM, FEEL FREE TO CONTACT US *****  
 
 ***** LEAVE A COMMENT IF YOU LOVED MY WORK *****
