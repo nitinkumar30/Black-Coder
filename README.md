@@ -1,4 +1,4 @@
-# Black-Coder - an e-Blog webiste in FLASK framework of PYTHON  :heart:
+# Black-Coder - an eBlog website in FLASK framework of PYTHON  :heart:
 
 My first blog project in python flask framework used to develop some user-friendly websites .
 
