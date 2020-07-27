@@ -1,0 +1,31 @@
+{
+  "params":
+  {
+    "admin_name": "Nitin Kumar",
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/blackcoder",
+    "prod_uri": "mysql://root:@localhost/blackcoder",
+    "fb_url": "https://facebook.com/blackcoder",
+    "tw_url": "https://twitter.com/blackcoder",
+    "gh_url": "https://github.com/blackcoder",
+    "blog_name": "The Black Coder",
+    "tagline": "Blog liked by programmers most ...",
+    "about_us": "Hi , my name is Nitin and this blog is made for programmers only . Hope you enjoy it !",
+    "no_of_posts": 2,
+    "login_img": "signin.png",
+    "admin_user": "Nitin",
+    "admin_pass": "Kumar",
+    "upload_location": "C:\\Users\\Nitin\\PycharmProjects\\my FLASK tutorials\\myFlaskTut\\CodeWithHarry Tutorials\\static\\uploads",
+    "fb_profile": "https://www.facebook.com/nitinkumaranonymous",
+    "github_profile": "https://github.com/nitin30kumar",
+    "linkedin_profile": "https://linkedin.com/in/nitin-kumar-626759131",
+    "gmail_profile": "mailto:nitinkumaranonymous@gmail.com",
+    "stack_overflow_profile": "https://stackoverflow.com/users/10957470/nitin-kumar",
+    "whatsapp_profile": "https://wa.me/919113797199?text=Hi%20Nitin.",
+    "instagram_profile": "https://www.instagram.com/blackeagle.nitin/",
+    "twitter_profile": "https://twitter.com/nitinBlackEagle?s=09",
+
+    "gmail-user": "nitinkumaranonymous123@gmail.com",
+    "gmail-password": "N1t1nkum@r"
+  }
+}

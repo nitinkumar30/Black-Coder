@@ -1,0 +1,1686 @@
+@import 'theme_color';
+@import 'variables';
+@import 'mixin';
+@import 'responsive';
+
+/* [Master Stylesheet v1.0] */
+
+/* =========== Index of CSS ===========
+:: 01.0 Import Fonts
+:: 02.0 Import All CSS
+:: 03.0 Base CSS
+    :: 3.1.0 Spacing
+    :: 3.2.0 Height
+    :: 3.2.0 Section Padding
+    :: 3.4.0 Section Heading
+    :: 3.5.0 Preloader
+    :: 3.6.0 Miscellaneous
+    :: 3.7.0 ScrollUp
+    :: 3.8.0 Fitness Button
+:: 04.0 Header Area CSS
+:: 05.0 Hero Slides Area
+:: 06.0 About Us CSS
+:: 07.0 Experts Area CSS
+:: 08.0 Services Area CSS
+:: 09.0 Price Table Area CSS
+:: 10.0 Working Hours Area CSS
+:: 11.0 Footer Area CSS
+:: 12.0 Breadcumb Area CSS
+:: 13.0 Teachers Area CSS
+:: 14.0 Blog Area CSS
+:: 15.0 Skills Area CSS
+:: 16.0 Contact Area CSS
+:: 17.0 Elements Area CSS
+    :: 17.1.0 Single Cool Facts CSS
+    :: 17.2.0 Accordians Area CSS
+    :: 17.3.0 Tabs Area CSS */
+
+/* :: 1.0 Import Fonts */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+
+/* :: 2.0 Import All CSS */
+
+@import 'css/bootstrap.min.css';
+@import 'css/classy-nav.css';
+@import 'css/owl.carousel.min.css';
+@import 'css/animate.css';
+@import 'css/magnific-popup.css';
+@import 'css/font-awesome.min.css';
+
+/* :: 3.0 Base CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $fonts;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $heading-color;
+    line-height: 1.3;
+    font-weight: 700;
+
+}
+
+p {
+    color: $text-color;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 400;
+}
+
+
+a,
+a:hover,
+a:focus {
+    @include trans-duration(500ms);
+    text-decoration: none;
+    outline: 0 solid transparent;
+    color: $dark-color;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+ul,
+ol {
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* :: 3.1.0 Spacing */
+
+.mt-15 {
+    margin-top: 15px !important;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mt-70 {
+    margin-top: 70px !important;
+}
+
+.mt-100 {
+    margin-top: 100px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+.mb-70 {
+    margin-bottom: 70px !important;
+}
+
+.mb-100 {
+    margin-bottom: 100px !important;
+}
+
+.ml-15 {
+    margin-left: 15px !important;
+}
+
+.ml-30 {
+    margin-left: 30px !important;
+}
+
+.ml-50 {
+    margin-left: 50px !important;
+}
+
+.mr-15 {
+    margin-right: 15px !important;
+}
+
+.mr-30 {
+    margin-right: 30px !important;
+}
+
+.mr-50 {
+    margin-right: 50px !important;
+}
+
+/* :: 3.2.0 Height */
+
+.height-400 {
+    height: 400px !important;
+}
+
+.height-500 {
+    height: 500px !important;
+}
+
+.height-600 {
+    height: 600px !important;
+}
+
+.height-700 {
+    height: 700px !important;
+}
+
+.height-800 {
+    height: 800px !important;
+}
+
+/* :: 3.2.0 Section Padding */
+
+.section-padding-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-padding-100-0 {
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+.section-padding-0-100 {
+    padding-top: 0;
+    padding-bottom: 100px;
+}
+
+.section-padding-100-70 {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+/* :: 3.4.0 Section Heading */
+
+.section-heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 60px;
+    h6 {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        background: -webkit-linear-gradient(to right, #b3e258, #39b143);
+        background: linear-gradient(to right, #b3e258, #39b143);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    h2 {
+        font-size: 36px;
+        font-weight: 600;
+        margin-bottom: 0;
+        @media #{$breakpoint-xs} {
+            font-size: 24px;
+        }
+    }
+    &.white {
+        h2 {
+            color: $white-color;
+        }
+    }
+}
+
+/* :: 3.5.0 Preloader */
+
+#preloader {
+    @include bg-gradients;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+    .circle-preloader {
+        display: block;
+        width: 60px;
+        height: 60px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-bottom-color: $white-color;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        animation: spin 2s infinite linear;
+    }
+    @-webkit-keyframes spin {
+        100% {
+            @include transform(rotate(360deg));
+        }
+    }
+    @keyframes spin {
+        100% {
+            @include transform(rotate(360deg));
+        }
+    }
+}
+
+/* :: 3.6.0 Miscellaneous */
+
+.bg-img {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+.bg-dark {
+    background-color: #000000 !important;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.bg-overlay {
+    position: relative;
+    z-index: 2;
+    background-position: center center;
+    background-size: cover;
+    &::after {
+        background-color: rgba(5, 11, 37, 0.85);
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+    }
+}
+
+.bg-fixed {
+    background-attachment: fixed !important;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+    color: $white-color;
+    right: 0;
+    padding-right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: $bg-default;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    right: -30px;
+    @media #{$breakpoint-xs} {
+        right: 0;
+    }
+}
+
+/* :: 3.7.0 ScrollUp */
+
+#scrollUp {
+    @include bg-gradients;
+    border-radius: 0;
+    bottom: 130px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+    color: $white-color;
+    font-size: 24px;
+    height: 40px;
+    line-height: 40px;
+    right: 30px;
+    text-align: center;
+    width: 40px;
+    @include trans-duration(500ms);
+    &:hover {
+        background-color: $dark-color;
+    }
+}
+
+/* :: 3.8.0 Fitness Button */
+
+.fitness-btn {
+    position: relative;
+    z-index: 9;
+    display: inline-block;
+    min-width: 200px;
+    height: 45px;
+    color: $bg-default;
+    border-radius: 10px;
+    padding: 0 30px;
+    font-size: 14px;
+    line-height: 39px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include trans-duration(500ms);
+    border: 3px solid $hover-color;
+    &:hover,
+    &:focus {
+        font-size: 14px;
+        font-weight: 700;
+        color: $white-color;
+        background-color: $bg-default;
+    }
+    &.btn-2 {
+        background-color: $bg-default;
+        color: $white-color;
+        &:hover,
+        &:focus {
+            color: $white-color;
+            background-color: $heading-color;
+            border-color: $heading-color;
+        }
+    }
+    &.btn-3 {
+        @include bg-gradients;
+        color: #101214;
+        border: none;
+        line-height: 45px;
+        &.active,
+        &:hover,
+        &:focus {
+            color: $white-color;
+        }
+    }
+    &.menu-btn {
+        color: #101214;
+        font-weight: 700;
+        @include bg-gradients;
+        border: none;
+        line-height: 45px;
+        &:hover,
+        &:focus {
+            color: $white-color;
+            font-weight: 700;
+        }
+        @media #{$breakpoint-md} {
+            margin-top: 30px;
+        }
+        @media #{$breakpoint-xs} {
+            margin-top: 30px;
+        }
+    }
+    &.btn-white {
+        background-color: $white-color;
+        &:hover,
+        &:focus {
+            color: $white-color;
+            background-color: $hover-color;
+            border-color: $hover-color;
+        }
+    }
+}
+
+/* :: 4.0 Header Area CSS */
+
+.header-area {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    top: 30px;
+    left: 0;
+    z-index: 1000;
+    .fitness-main-menu {
+        position: relative;
+        width: 100%;
+        height: 85px;
+        background-color: transparent;
+        .classy-nav-container {
+            background-color: transparent;
+        }
+        .classy-navbar {
+            background-color: transparent;
+            height: 85px;
+            padding: 0;
+            .classynav ul li a {
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $white-color;
+                &:hover,
+                &:focus {
+                    color: $hover-color;
+                }
+                @media #{$breakpoint-lg} {
+                    padding: 0 7px;
+                    font-size: 13px;
+                }
+                @media #{$breakpoint-md} {
+                    background-color: $heading-color;
+                }
+                @media #{$breakpoint-xs} {
+                    background-color: $heading-color;
+                }
+            }
+            .classynav ul li.megamenu-item > a::after,
+            .classynav ul li.has-down > a::after {
+                color: $white-color;
+            }
+            .classynav ul li ul li a {
+                color: $heading-color;
+                @media #{$breakpoint-lg} {
+                    padding: 0 15px;
+                }
+                @media #{$breakpoint-md} {
+                    color: $white-color;
+                }
+                @media #{$breakpoint-xs} {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .is-sticky {
+        .fitness-main-menu {
+            position: fixed;
+            width: 100%;
+            height: 85px;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            background-color: $heading-color;
+            box-shadow: 0 5px 50px 15px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.breakpoint-on .classy-navbar .classy-menu {
+    @media #{$breakpoint-md} {
+        background-color: $heading-color;
+    }
+    @media #{$breakpoint-xs} {
+        background-color: $heading-color;
+    }
+}
+
+.classynav ul li .megamenu .single-mega.cn-col-4 {
+    @media #{$breakpoint-md} {
+        padding: 0;
+    }
+    @media #{$breakpoint-xs} {
+        padding: 0;
+    }
+}
+
+.classycloseIcon .cross-wrap span {
+    background: $white-color;
+}
+
+/* :: 5.0 Hero Slides Area */
+
+.hero-slides {
+    position: relative;
+    z-index: 1;
+    .single-hero-slide {
+        width: 100%;
+        height: 880px;
+        position: relative;
+        z-index: 1;
+        &::after {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            content: '';
+        }
+        @media #{$breakpoint-lg} {
+            height: 650px;
+        }
+        @media #{$breakpoint-md} {
+            height: 550px;
+        }
+        @media #{$breakpoint-xs} {
+            height: 600px;
+        }
+        h2 {
+            font-size: 100px;
+            color: $white-color;
+            margin-bottom: 0;
+            font-weight: 400;
+            @media #{$breakpoint-lg} {
+                font-size: 48px;
+            }
+            @media #{$breakpoint-md} {
+                font-size: 36px;
+            }
+            @media #{$breakpoint-xs} {
+                font-size: 30px;
+            }
+        }
+        p {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 40px;
+            color: $white-color;
+        }
+    }
+    .owl-prev,
+    .owl-next {
+        width: 95px;
+        height: 45px;
+        line-height: 39px;
+        color: $white-color;
+        border: 3px solid $bg-default;
+        border-radius: 10px;
+        background-color: $dark-color;
+        top: 50%;
+        margin-top: -28px;
+        left: 5%;
+        position: absolute;
+        z-index: 10;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        opacity: 0;
+        visibility: hidden;
+        @include trans-duration(500ms);
+        @media #{$breakpoint-xs} {
+            width: 60px;
+            height: 40px;
+            line-height: 35px;
+            margin-top: -30px;
+        }
+        &:hover,
+        &:focus {
+            background-color: $dark-color;
+            color: $white-color;
+        }
+    }
+    .owl-next {
+        left: auto;
+        right: 5%;
+    }
+    &:hover .owl-prev,
+    &:hover .owl-next {
+        opacity: 1;
+        visibility: visible;
+    }
+    .owl-dots {
+        position: absolute;
+        bottom: 50px;
+        z-index: 300;
+        @include display-flex(flex);
+        width: 1110px;
+        left: 50%;
+        @include transform(translateX(-50%));
+        @media #{$breakpoint-lg} {
+            width: 920px;
+        }
+        @media #{$breakpoint-md} {
+            width: 700px;
+        }
+        @media #{$breakpoint-xs} {
+            width: 290px;
+        }
+        @media #{$breakpoint-xs-landscape} {
+            width: 450px;
+        }
+        .owl-dot {
+            color: $white-color;
+            font-size: 14px;
+            font-weight: 700;
+            margin-right: 10px;
+            &.active {
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+/* :: 6.0 About Us CSS */
+
+.single-add-area img {
+    width: 100%;
+}
+
+.about-us-area {
+    position: relative;
+    margin-bottom: -50px;
+    z-index: 100;
+    @media #{$breakpoint-lg} {
+        padding-bottom: 100px;
+    }
+}
+
+.about-thumb {
+    position: relative;
+    margin-top: -50px;
+    @media #{$breakpoint-md} {
+        margin-top: 50px;
+    }
+    @media #{$breakpoint-xs} {
+        margin-top: 50px;
+    }
+}
+
+.about--thumb {
+    @media #{$breakpoint-md} {
+        margin-top: 100px;
+    }
+    @media #{$breakpoint-xs} {
+        margin-top: 100px;
+    }
+}
+
+.about-btn-group {
+    @media #{$breakpoint-xs} {
+        .fitness-btn {
+            margin: 10px;
+        }
+    }
+}
+
+/* :: 7.0 Experts Area CSS */
+
+.meet-the-experts-area {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 630px;
+    @media #{$breakpoint-md} {
+        height: 702px;
+    }
+    @media #{$breakpoint-xs} {
+        height: 730px;
+    }
+    @media #{$breakpoint-xs-landscape} {
+        height: 800px;
+    }
+    .experts-text {
+        p {
+            font-style: italic;
+            color: $white-color;
+        }
+    }
+}
+
+.experts-team-members {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 500px;
+    margin-top: -95px;
+    overflow: hidden;
+    @media #{$breakpoint-xs} {
+        height: 380px;
+        margin-top: -30px;
+    }
+    @media #{$breakpoint-xs-landscape} {
+        height: 450px;
+        margin-top: 30px;
+    }
+    .single-team-members {
+        position: absolute;
+        .team-members-info {
+            position: absolute;
+            padding: 15px 30px;
+            background-color: $heading-color;
+            z-index: 100;
+            width: auto;
+            @media #{$breakpoint-xs} {
+                padding: 7px 10px;
+            }
+            h3 {
+                font-size: 22px;
+                color: $white-color;
+                text-transform: uppercase;
+                margin-bottom: 0;
+                font-style: italic;
+                @media #{$breakpoint-xs} {
+                    font-size: 14px;
+                }
+            }
+            h6 {
+                font-size: 14px;
+                color: $hover-color;
+                margin-bottom: 0;
+                text-transform: uppercase;
+                font-style: italic;
+                @media #{$breakpoint-xs} {
+                    font-size: 11px;
+                }
+            }
+        }
+        &:first-child {
+            width: 40%;
+            left: 0;
+            bottom: -50px;
+            z-index: 10;
+            @media #{$breakpoint-xs} {
+                width: 60%;
+            }
+            .team-members-info {
+                top: 40%;
+                left: 0;
+                z-index: 50;
+            }
+        }
+        &:nth-child(2) {
+            width: 30%;
+            left: 30%;
+            bottom: 0;
+            z-index: -10;
+            @media #{$breakpoint-xs} {
+                width: 50%;
+                left: 40%;
+            }
+            @media #{$breakpoint-xs-landscape} {
+                left: 30%;
+            }
+            .team-members-info {
+                top: 40%;
+                left: 0;
+                z-index: 50;
+                @include transform(scale(0.6));
+            }
+        }
+        &:nth-child(3) {
+            width: 30%;
+            left: 55%;
+            bottom: -60px;
+            z-index: -20;
+            @media #{$breakpoint-xs} {
+                width: 50%;
+            }
+            .team-members-info {
+                top: 40%;
+                left: 0;
+                z-index: 50;
+                @include transform(scale(0.6));
+            }
+        }
+        &:nth-child(4) {
+            width: 30%;
+            right: -25px;
+            bottom: -100px;
+            @media #{$breakpoint-xs} {
+                width: 50%;
+                bottom: -75px;
+            }
+            @media #{$breakpoint-xs-landscape} {
+                bottom: -100px;
+            }
+            .team-members-info {
+                top: 40%;
+                left: 0;
+                z-index: 50;
+                @include transform(scale(0.6));
+            }
+        }
+    }
+}
+
+/* :: 8.0 Services Area CSS */
+
+.single-service-area {
+    .course-icon {
+        @include flex(0 0 77px);
+        min-width: 77px;
+        width: 77px;
+        height: 77px;
+        background-color: $bg-default;
+        color: $white-color;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+    p {
+        margin-bottom: 0;
+        margin-top: 15px;
+    }
+    .course-content {
+        h4 {
+            font-size: 20px;
+            margin-bottom: 0;
+            @include trans-duration(500ms);
+        }
+    }
+    &:hover,
+    &:focus {
+        .course-icon {
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+            @include bg-gradients;
+        }
+        .course-content {
+            h4 {
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+/* :: 9.0 Price Table Area CSS */
+
+.single-price-table {
+    position: relative;
+    z-index: 1;
+    background-color: $white-color;
+    .price-table-content {
+        padding: 40px;
+        .price {
+            font-size: 36px;
+            font-weight: 600;
+            color: $hover-color;
+            line-height: 1;
+            span {
+                font-size: 14px;
+                font-style: italic;
+                color: $secondary-color;
+                font-weight: 400;
+            }
+        }
+        h5 {
+            font-size: 22px;
+            margin: 30px 0;
+            font-weight: 600;
+        }
+        .price-data {
+            li {
+                color: $secondary-color;
+                font-weight: 400;
+                font-size: 14px;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                i {
+                    color: $hover-color;
+                    font-size: 8px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.service-page {
+    .single-price-table {
+        background-color: #f0f2f8;
+        @include trans-duration(500ms);
+        border: 3px solid transparent;
+        .price-table-content {
+            h5 {
+                font-size: 22px;
+                margin: 0;
+                font-weight: 600;
+            }
+        }
+        &:hover,
+        &:focus {
+            border: 3px solid $hover-color;
+            box-shadow: 0 5px 70px rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+/* :: 10.0 Working Hours Area CSS */
+
+.working-hours {
+    position: relative;
+    z-index: 1;
+    li {
+        @include display-flex(flex);
+        @include align-items(center);
+        @include justify-content-between;
+        font-weight: 600;
+        font-size: 16px;
+        color: $secondary-color;
+        padding: 12px 0;
+        border-bottom: 3px solid $border-color;
+        @include trans-duration(500ms);
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover,
+        &:focus {
+            color: $hover-color;
+        }
+    }
+}
+
+.our-newsletter-area {
+    .form-control {
+        width: 100%;
+        height: 55px;
+        border: 3px solid $border-color;
+        border-radius: 10px;
+        padding: 0 40px;
+        font-size: 14px;
+        color: $secondary-color;
+        font-style: italic;
+        background-color: transparent;
+        @include trans-duration(500ms);
+        &:focus {
+            box-shadow: none;
+            border-color: $hover-color;
+        }
+    }
+    #emailHelp {
+        font-size: 13px;
+        margin-top: 30px;
+        line-height: 2;
+        color: $secondary-color;
+        font-style: italic;
+    }
+}
+
+/* :: 11.0 Footer Area CSS */
+
+.main-footer-area {
+    .footer-widget-area {
+        .widget-title {
+            margin-bottom: 50px;
+            h6 {
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 0;
+                color: $white-color;
+                margin-top: 20px;
+                text-transform: uppercase;
+                font-style: italic;
+            }
+        }
+        p {
+            color: #bebebe;
+            font-weight: 600;
+        }
+        .footer-social-info {
+            a {
+                display: inline-block;
+                color: $white-color;
+                margin-right: 25px;
+                &:hover,
+                &:focus {
+                    color: $hover-color;
+                }
+                @media #{$breakpoint-lg} {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .testimonials-slides {
+            position: relative;
+            z-index: 1;
+            .single-testimonial {
+                margin-bottom: 50px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                p {
+                    font-size: 13px;
+                    font-style: italic;
+                    color: #bebebe;
+                }
+                span {
+                    font-weight: 600;
+                    font-size: 13px;
+                    color: $hover-color;
+                }
+            }
+        }
+        .fitness-classes {
+            position: relative;
+            z-index: 1;
+            li a {
+                display: block;
+                color: #bebebe;
+                font-size: 14px;
+                margin-bottom: 20px;
+                font-weight: 400;
+                &:hover,
+                &:focus {
+                    color: $hover-color;
+                }
+            }
+            li:last-child a {
+                margin-bottom: 0;
+            }
+        }
+        .single-contact {
+            span {
+                color: $hover-color;
+                font-size: 14px;
+                text-decoration: underline;
+                margin-bottom: 10px;
+                display: block;
+            }
+            p {
+                color: #bebebe;
+                margin-bottom: 0;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.bottom-footer-area {
+    padding: 40px 0;
+    text-align: center;
+    p {
+        font-size: 12px;
+        margin-bottom: 0;
+        color: #5c6077;
+        font-weight: 600;
+        a {
+            color: #5c6077;
+            font-size: 12px;
+            font-weight: 600;
+            &:hover,
+            &:focus {
+                color: $hover-color;
+            }
+        }
+    }
+}
+
+/* :: 12.0 Breadcumb Area CSS */
+
+.breadcumb-area {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 325px;
+    .bradcumbContent {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        .breadcrumb {
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            margin-bottom: 30px;
+            .breadcrumb-item {
+                font-size: 11px;
+                color: $hover-color;
+                font-weight: 700;
+                text-transform: uppercase;
+                background: -webkit-linear-gradient(to right, #b3e258, #39b143);
+                background: linear-gradient(to right, #b3e258, #39b143);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                a {
+                    font-size: 11px;
+                    color: $hover-color;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    background: -webkit-linear-gradient(to right, #b3e258, #39b143);
+                    background: linear-gradient(to right, #b3e258, #39b143);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+        h2 {
+            font-size: 30px;
+            color: $white-color;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+/* :: 13.0 Teachers Area CSS */
+
+.single-teachers-area {
+    position: relative;
+    z-index: 1;
+    .teachers-bg-gradients {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        @include bg-gradients;
+        top: 0;
+        left: 0;
+        z-index: -5;
+    }
+    .teachers-thumbnail {
+        width: 100%;
+    }
+    .teachers-info {
+        position: relative;
+        padding: 15px 20px;
+        background-color: #000000;
+        width: 80%;
+        overflow: hidden;
+        @include trans-duration(500ms);
+        &:after {
+            content: '';
+            width: 24px;
+            height: 120%;
+            background-color: $white-color;
+            top: -2px;
+            right: -10px;
+            position: absolute;
+            z-index: 10;
+            @include transform(rotate(18deg));
+        }
+        h6 {
+            margin-bottom: 0;
+            color: $white-color;
+            font-style: italic;
+            text-transform: uppercase;
+            @include trans-duration(500ms);
+        }
+        span {
+            color: $hover-color;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            @include trans-duration(500ms);
+        }
+    }
+    &:hover .teachers-info {
+        background-color: $hover-color;
+        span {
+            color: $white-color;
+        }
+    }
+}
+
+/* :: 14.0 Blog Area CSS */
+
+.fitness-blog-sidebar {
+    @media #{$breakpoint-xs} {
+        margin-top: 100px;
+    }
+}
+
+.single-blog-post {
+    .blog-post-thumb {
+        position: relative;
+        z-index: 1;
+        .post-date {
+            width: 77px;
+            height: 77px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            background-color: $hover-color;
+            border-radius: 50%;
+            @include display-flex(flex);
+            @include align-items(center);
+            @include justify-content-center;
+            box-shadow: 0 2px 50px rgba(0, 0, 0, 0.2);
+            p {
+                color: $white-color;
+                font-weight: 600;
+                margin-bottom: 0;
+                font-size: 24px;
+                line-height: 1;
+                text-align: center;
+                span {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    display: block;
+                }
+            }
+        }
+    }
+    p {
+        line-height: 2.2;
+        margin-bottom: 0;
+    }
+    .post-title {
+        font-size: 36px;
+        display: block;
+        margin-bottom: 5px;
+        &:hover,
+        &:focus {
+            color: $hover-color;
+        }
+    }
+    .post-meta {
+        margin-bottom: 30px;
+        p {
+            font-size: 14px;
+            color: $text-color;
+            margin-bottom: 0;
+            a {
+                font-size: 14px;
+                color: $hover-color;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.fitness-pagination-area {
+    .pagination {
+        .page-item {
+            .page-link {
+                background-color: transparent;
+                display: block;
+                padding: 0;
+                border: none;
+                margin-right: 10px;
+                color: $heading-color;
+                font-size: 14px;
+                font-weight: 700;
+                &:hover,
+                &:focus {
+                    color: $hover-color;
+                }
+            }
+            &:first-child .page-link {
+                margin-left: 0;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            &:last-child .page-link {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &.active {
+                .page-link {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+}
+
+.blog-post-categories {
+    h5 {
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+    ul {
+        padding-left: 25px;
+        li {
+            a {
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                @include display-flex(flex);
+                @include justify-content-between;
+                color: $secondary-color;
+                &:hover,
+                &:focus {
+                    color: $hover-color;
+                }
+            }
+        }
+    }
+}
+
+.add-widget {
+    a {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.latest-blog-posts {
+    h5 {
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+    .post-thumbnail {
+        margin-bottom: 20px;
+    }
+    .post-content {
+        .post-title {
+            @include trans-duration(500ms);
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            &:hover,
+            &:focus {
+                color: $hover-color;
+            }
+        }
+        .post-meta {
+            p {
+                font-size: 12px;
+                color: $text-color;
+                a {
+                    font-size: 12px;
+                    color: $hover-color;
+                    &:hover,
+                    &:focus {
+                        color: $text-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.map-area {
+    position: relative;
+    z-index: 2;
+    iframe {
+        width: 100%;
+        height: 710px;
+        border: none;
+        margin-bottom: 0;
+    }
+}
+
+/* :: 15.0 Skills Area CSS */
+
+.single-skils-area {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    .circle {
+        position: relative;
+        z-index: 10;
+    }
+    .skills-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        @include transform(translate(-50%, -50%));
+        span {
+            font-size: 48px;
+            color: $white-color;
+            font-weight: 700;
+        }
+        h6 {
+            font-weight: 400;
+            color: $white-color;
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    }
+    &.elements {
+        span {
+            color: $heading-color;
+        }
+        h6 {
+            color: $text-color;
+        }
+    }
+}
+
+/* :: 16.0 Contact Area CSS */
+
+.contact-title {
+    h3 {
+        font-weight: 600;
+        margin-bottom: 85px;
+        font-size: 36px;
+    }
+}
+
+.contact-content {
+    position: relative;
+    z-index: 10;
+    .contact-form-area {
+        .form-group {
+            position: relative;
+            z-index: 9;
+            &::after {
+                content: '';
+                width: 100%;
+                height: 3px;
+                @include bg-gradients;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+                z-index: 10;
+                opacity: 0;
+                visibility: hidden;
+                @include trans-duration(500ms);
+            }
+            &:hover::after {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        .form-control {
+            position: relative;
+            z-index: 10;
+            height: 45px;
+            width: 100%;
+            background-color: #eef3f6;
+            font-size: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 0;
+            padding: 15px 25px;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        textarea.form-control {
+            height: 180px;
+        }
+    }
+}
+
+.fitness-contact-info {
+    position: absolute;
+    z-index: 99;
+    width: 450px;
+    height: 270px;
+    padding: 45px 60px;
+    background-color: $bg-default;
+    top: 50%;
+    @include transform(translateY(-50%));
+    left: 20%;
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-bottom: 270px solid $bg-default;
+        border-left: 135px solid transparent;
+        border-right: 135px solid transparent;
+        position: absolute;
+        top: 0;
+        right: -135px;
+        z-index: 10;
+        @media #{$breakpoint-xs} {
+            display: none;
+        }
+    }
+    @media #{$breakpoint-xs} {
+        left: 5%;
+        width: 280px;
+        padding: 45px 30px;
+    }
+    @media #{$breakpoint-md} {
+        left: 10%;
+    }
+    h6 {
+        color: $white-color;
+        font-weight: 600;
+        margin-bottom: 15px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        @media #{$breakpoint-xs} {
+            font-size: 14px;
+        }
+    }
+}
+
+/* :: 17.0 Elements Area CSS */
+
+.elements-title {
+    h2 {
+        font-weight: 600;
+        font-size: 36px;
+        @media #{$breakpoint-xs} {
+            font-size: 24px;
+        }
+    }
+}
+
+/* :: 17.1.0 Single Cool Facts CSS */
+
+.single-cool-fact {
+    position: relative;
+    z-index: 1;
+    img {
+        display: block;
+        margin: 0 auto 20px;
+    }
+    h2 {
+        font-size: 48px;
+        margin-bottom: 0;
+        color: $white-color;
+    }
+    p {
+        font-size: 18px;
+        margin-bottom: 0;
+        color: $white-color;
+    }
+    &.elements {
+        h2 {
+            color: $heading-color;
+        }
+        p {
+            color: $text-color;
+        }
+    }
+}
+
+/* :: 17.2.0 Accordians Area CSS */
+
+.single-accordion {
+    &.panel {
+        background-color: $white-color;
+        border: 0 solid transparent;
+        border-radius: 4px;
+        box-shadow: 0 0 0 transparent;
+        margin-bottom: 15px;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+    h6 {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        a {
+            background-color: $hover-color;
+            border-radius: 0;
+            color: $white-color;
+            display: block;
+            margin: 0;
+            padding: 15px 60px 15px 30px;
+            position: relative;
+            font-size: 14px;
+            text-transform: capitalize;
+            font-weight: 500;
+            border-radius: 10px;
+            span {
+                font-size: 10px;
+                position: absolute;
+                right: 20px;
+                text-align: center;
+                top: 18px;
+                &.accor-open {
+                    opacity: 0;
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    filter: alpha(opacity=0);
+                }
+            }
+            &.collapsed {
+                @include bg-gradients;
+                color: $white-color;
+                span {
+                    &.accor-close {
+                        opacity: 0;
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                        filter: alpha(opacity=0);
+                    }
+                    &.accor-open {
+                        opacity: 1;
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+                        filter: alpha(opacity=100);
+                    }
+                }
+            }
+        }
+    }
+    .accordion-content {
+        border-top: 0 solid transparent;
+        box-shadow: none;
+        p {
+            padding: 20px 15px 5px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* :: 17.3.0 Tabs Area CSS */
+
+.fitness-tabs-content {
+    position: relative;
+    z-index: 1;
+    .nav-tabs {
+        border-bottom: none;
+        margin-bottom: 50px;
+        .nav-link {
+            background-color: $hover-color;
+            padding: 0 20px;
+            height: 45px;
+            line-height: 45px;
+            color: $white-color;
+            margin: 0 2px;
+            border-radius: 10px;
+            border: none;
+            @media #{$breakpoint-lg} {
+                padding: 0 10px;
+            }
+            @media #{$breakpoint-xs} {
+                padding: 0 5px;
+                font-size: 11px;
+            }
+            @media #{$breakpoint-xs-landscape} {
+                padding: 0 15px;
+            }
+            &.active {
+                @include bg-gradients;
+                color: $white-color;
+            }
+        }
+    }
+    .tab-content {
+        h6 {
+            font-size: 18px;
+        }
+    }
+}
