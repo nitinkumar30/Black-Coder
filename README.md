@@ -1,11 +1,37 @@
 # Black-Coder - an eBlog website in FLASK framework of PYTHON  :heart:
 
-My first blog project in python flask framework used to develop some user-friendly websites .
+My first blog project in 'flask' framework of python used to develop some user-friendly blogs
+
+# How to use it ?
+
+- [ ] Install flask library :gift_heart:
+
+> pip install flask
+
+> if using PyCharm , press CTRL + Alt + S and press '+' on right side and search for 'flask' and install it
+
+- [ ] Install flask_mail library :e-mail:
+
+> pip install flask_mail
+
+> if using PyCharm , press CTRL + Alt + S and press '+' on right side and search for 'flask_mail' and install it
+
+- [ ] Install json library :outbox_tray:
+
+> pip install json
+
+> if using PyCharm , press CTRL + Alt + S and press '+' on right side and search for 'json' and install it
+
+- [ ] Install flask_sqlalchemy library :ballot_box:
+
+> pip install flask_sqlalchemy
+
+> if using PyCharm , press CTRL + Alt + S and press '+' on right side and search for 'flask_sqlalchemy' and install it
 
 
 # How to run project
 
-Please don't misuse my project :smiling_imp: and I haven't given much time on the proper functioning of next-post and previous-post .
+Please don't misuse my project :smiling_imp: and I haven't given much time on the proper functioning of pagination .
 
 It has error in the code in main.py :bug: :shit:
 
