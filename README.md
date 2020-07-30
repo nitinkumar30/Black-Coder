@@ -45,7 +45,7 @@ DON'T FORGET TO CREATE A DATABASE NAMING "blackcoder" and import the sql file .
 
 Without the database , the project won't run.
 
-In case you find any error or bug , feel free to contact me :telephone: 9113797199
+In case you find any error or bug , feel free to contact me
 
 Please change 'your_gmail_id' and 'your_gmail_password' fields with your credentials to work contact us page with real-time mails .
 
@@ -53,7 +53,7 @@ Please change 'your_gmail_id' and 'your_gmail_password' fields with your credent
 
 # ADMIN LOGIN:
 
-Username: Nitin
+Username: Nitin \
 Password: Kumar
 
 You just need to see the post , no need to login ... or else login with the above credentials
